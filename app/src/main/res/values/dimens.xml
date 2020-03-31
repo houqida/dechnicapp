@@ -1,0 +1,11 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="activity_actionbar_height">50dp</dimen>
+    <dimen name="login_edit">46dp</dimen>
+
+    <dimen name="toolbar_height">45dp</dimen>
+    <dimen name="image_height">20dp</dimen>
+</resources>

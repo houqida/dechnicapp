@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">德诚能源管家</string>
+
+    <string name="server_title">设置服务器地址</string>
+    <string name="title_activity_login">Sign in</string>
+    <string name="http_error">连接超时，请重试</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password (optional)</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+
+    <string name="rembername">记住密码</string>
+    <string name="zdlogin">自动登陆</string>
+    <string name="loginbutton">登陆</string>
+    <string name="companyname">山东同方德诚科技有限公司</string>
+    <string name="actionbar_title">德诚能源管家</string>
+    <string name="actionbar_title_scan">应用场景</string>
+    <string name="actionbar_title_elc">设备电量</string>
+    <string name="actionbar_title_en">节能监测</string>
+    <string name="actionbar_title_central_air">中央空调</string>
+
+    <string name="settings">设置</string>
+    <string name="help">帮助</string>
+    <string name="string_help_text">当前应用缺少必要权限。\n\n请点击\"设置\"-\"权限\"-打开所需权限。\n\n最后点击两次后退按钮，即可返回。</string>
+    <string name="quit">退出</string>
+    <string name="scene_devicelist_title">添加设备</string>
+    <string name="goadd">去添加</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    
+
+</resources>

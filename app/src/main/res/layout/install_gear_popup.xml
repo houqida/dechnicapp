@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#99000000">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:paddingBottom="12dp"
+            android:paddingTop="12dp"
+            android:text="档位" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#f0f0f0" />
+
+        <TextView
+            android:id="@+id/toLow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingBottom="12dp"
+            android:paddingTop="12dp"
+            android:text="低档"
+            android:background="@drawable/bg_install_modlegear_tv"
+            android:textColor="@drawable/bg_install_modlegear_tv_color"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#f0f0f0" />
+
+        <TextView
+            android:id="@+id/toMiddle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingBottom="12dp"
+            android:paddingTop="12dp"
+            android:text="中档"
+            android:background="@drawable/bg_install_modlegear_tv"
+            android:textColor="@drawable/bg_install_modlegear_tv_color" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#f0f0f0" />
+
+        <TextView
+            android:id="@+id/toHigh"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingBottom="12dp"
+            android:paddingTop="12dp"
+            android:text="高档"
+            android:background="@drawable/bg_install_modlegear_tv"
+            android:textColor="@drawable/bg_install_modlegear_tv_color" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#f0f0f0" />
+
+        <TextView
+            android:id="@+id/toAuto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingBottom="12dp"
+            android:paddingTop="12dp"
+            android:text="自动"
+            android:background="@drawable/bg_install_modlegear_tv"
+            android:textColor="@drawable/bg_install_modlegear_tv_color" />
+    </LinearLayout>
+
+</RelativeLayout>

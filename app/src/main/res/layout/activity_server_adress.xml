@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_server_adress"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    android:background="@color/server_activity_background_color"
+    tools:context="com.dechnic.omsdcapp.activity.ServerAdressActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/activity_actionbar_height"
+        android:background="@color/actionbar_color">
+        <RelativeLayout
+            android:id="@+id/backRel"
+            android:layout_width="@dimen/activity_actionbar_height"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/back_icon"
+                android:layout_centerInParent="true"/>
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/server_title"
+            android:textSize="16sp"
+            android:textColor="@color/white"/>
+
+        <RelativeLayout
+            android:id="@+id/sureRel"
+            android:layout_width="@dimen/activity_actionbar_height"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="确定"
+                android:textSize="16sp"
+                android:layout_centerInParent="true"
+                android:textColor="@color/white"/>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/set_server_adress"
+        android:layout_gravity="center"
+        android:layout_marginTop="66dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="13dp"
+        android:textColor="#313131"
+        android:textSize="14sp"
+        android:text="输入服务器网址，进行连接"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="64dp"
+        android:background="@color/white"
+        >
+        <TextView
+            android:id="@+id/adress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:text="服务器地址"
+            android:textColor="@color/black"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"/>
+
+        <EditText
+            android:id="@+id/setAdressTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:hint="请输入ip地址"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/adress"
+            android:textSize="14sp"
+            android:textColorHint="@color/textColorHint"
+            android:layout_marginLeft="12dp"/>
+    </RelativeLayout>
+</LinearLayout>

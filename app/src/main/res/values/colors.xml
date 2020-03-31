@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+
+    <color name="black01">#222222</color>
+
+    <color name="actionbar_color">#0085E3</color>
+    <color name="font_color1">#666666</color>
+
+    <color name="blue">#0085E3</color>
+
+    <color name="main_color">#0085E3</color>
+
+    <color name="temp_color_online">#666666</color>
+    <color name="temp_color_offline">#999999</color>
+
+    <color name="text_color0">#cccccc</color>
+    <color name="text_color1">#313131</color>
+    <color name="text_color2">#666666</color>
+    <color name="text_color3">#999999</color>
+
+
+    <color name="line_color1">#cccccc</color>
+
+    <color name="textColorHint">#cccccc</color>
+
+
+    <color name="server_activity_background_color">#f7f9fa</color>
+
+    <color name="temp_details_color">#30B5FF</color>
+
+    <color name="login_activity_color">#1392EB</color>
+    <color name="timer_activity_color">#f0f0f0</color>
+
+    <color name="timer_open_timce_status_color">#313131</color>
+    <color name="timer_close_timce_status_color">#d2d2d2</color>
+    <color name="timer_close_time_color">#999999</color>
+
+    <color name="detail_line_online_color">#6fcafb</color>
+    <color name="detail_online_close">#8098a6</color>
+    <color name="detail_offline">#c2c2c2</color>
+
+
+    <color name="switch_online_open">#ffca28</color>
+    <color name="switch_online_close">#71706d</color>
+    <color name="switch_offline">#71706d</color>
+
+    <color name="socket_online_open">#81c532</color>
+    <color name="socket_online_close">#555b5f</color>
+    <color name="socket_offline">#999999</color>
+
+    <color name="alertdialog_line">#c6c6c6</color>
+    <color name="actionsheet_blue">#0085E3</color>
+
+    <color name="gray">#AAAA</color>
+
+    <color name="grid_line">#e0e0e0</color>
+    
+    <color name="scene_bg_color">#f0f0f0</color>
+
+    <color name="no_function">#AAAAAAAA</color>
+
+    <color name="have_function">#00000000</color>
+
+    <color name="relativeLayout_pressed">#e06699ff</color>
+    <color name="relativeLayout_norpressed">#00000000</color>
+
+    <color name="can_not_click">#7ed1ff</color>
+
+    <color name="scene_pressed">#66AAAAAA</color>
+    <color name="scene_nopressed">#00000000</color>
+
+</resources>

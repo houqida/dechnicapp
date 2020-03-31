@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="@dimen/activity_actionbar_height"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <com.dechnic.omsdcapp.widget.LineGridView
+            android:id="@+id/scene_Gv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:numColumns="3"
+            android:horizontalSpacing="1dp"
+            android:verticalSpacing="1dp"
+            android:visibility="visible"
+            ></com.dechnic.omsdcapp.widget.LineGridView>
+
+    </ScrollView>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/grid_line"/>
+    <RelativeLayout
+        android:id="@+id/empty_Rel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+        <ImageView
+            android:id="@+id/iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/scene_kong"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="110dp"/>
+        <TextView
+            android:id="@+id/tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="还没有任何场景记录哦~"
+            android:textColor="@color/text_color3"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/iv"
+            android:layout_marginTop="35dp"/>
+
+        <Button
+            android:id="@+id/addScene_btn"
+            android:layout_width="140dp"
+            android:layout_height="40dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/tv"
+            android:text="@string/goadd"
+            android:background="@drawable/add_scene"
+            android:layout_marginTop="25dp"
+            android:textSize="12sp"
+            android:button="@null"
+            android:textColor="@color/white"/>
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,659 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_temp_control_detail_offline"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/off_titleBar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/activity_actionbar_height">
+
+        <RelativeLayout
+            android:id="@+id/off_backRelLay"
+            android:layout_width="@dimen/activity_actionbar_height"
+            android:layout_height="@dimen/activity_actionbar_height">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@mipmap/back_icon" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/off_deviceTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="二层101温控器"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+        <RelativeLayout
+            android:id="@+id/off_popupRelLay"
+            android:layout_width="@dimen/activity_actionbar_height"
+            android:layout_height="@dimen/activity_actionbar_height"
+            android:layout_alignParentRight="true">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@mipmap/off_temp_popup" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.dechnic.omsdcapp.widget.ShowPercentView
+                    android:id="@+id/myShowPercentView_off"
+                    android:layout_marginTop="20dp"
+                    android:padding="10dp"
+                    android:layout_width="260dp"
+                    android:layout_height="260dp"
+                    android:layout_centerInParent="true"
+                    app:allLineColor="#c2c2c2"
+                    app:percentLineColorLow="#858585"
+                    app:percentLineColorHight="#858585"/>
+
+                <ImageView
+                    android:id="@+id/centerIv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-50dp"
+                    android:layout_centerHorizontal="true"/>
+
+                <RelativeLayout
+                    android:id="@+id/sub_temp_Rel_off"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="15dp"
+                    android:layout_marginTop="-90dp"
+                    android:layout_below="@id/myShowPercentView_off"
+                    android:layout_marginRight="50dp"
+                    android:layout_toLeftOf="@id/centerIv">
+                    <ImageView
+                        android:id="@+id/sub_temp_iv_off"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/sub_temp_icon_offline"
+                        />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/add_temp_Rel_off"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="15dp"
+                    android:layout_marginTop="-90dp"
+                    android:layout_below="@id/myShowPercentView_off"
+                    android:layout_marginLeft="50dp"
+                    android:layout_toRightOf="@id/centerIv"
+                    >
+                    <ImageView
+                        android:id="@+id/add_temp_iv_off"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/add_temp_icon_offline"
+                        />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rel"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="100dp"
+                   android:layout_centerInParent="true">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true">
+                        <TextView
+                            android:id="@+id/percentTempTv_off"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:gravity="center"
+                            android:textSize="55sp"
+                            android:textColor="#c2c2c2"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/percentTempTv_off"
+                            android:text="℃"
+                            android:textColor="#c2c2c2"
+                            android:textSize="20sp"/>
+                        <ImageView
+                            android:id="@+id/percentTempIv_off"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@mipmap/off_tocold"
+                            android:layout_marginTop="30dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_toRightOf="@+id/percentTempTv_off"
+                            />
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@id/rel"
+                    android:layout_marginTop="10dp"
+                    android:background="#C1C19D"
+                    android:padding="3dp"
+                    android:textSize="11sp"
+                    android:visibility="gone"
+                    android:textColor="#AF7B5C"
+                    android:text="国家规定最高限温"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="10"
+                    android:layout_toLeftOf="@id/rel"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:textColor="#c2c2c2"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="40"
+                    android:layout_toRightOf="@id/rel"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="#c2c2c2"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="25"
+                    android:layout_marginTop="65dp"
+                    android:textColor="#c2c2c2"/>
+
+                <com.dechnic.omsdcapp.widget.ShowPercentSmallView
+                    android:layout_width="180dp"
+                    android:layout_height="180dp"
+                    app:allLineColor="#a9a9a9"
+                    android:id="@+id/showPercentSmallView_off"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginTop="-40dp"
+                android:orientation="horizontal">
+                <RelativeLayout
+                    android:id="@+id/off_modelRel"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/off_modelTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="模式 制冷"
+                        android:textColor="@color/detail_offline"
+                        android:textSize="14sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/off_gearRel"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/off_gearTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="档位 低档"
+                        android:textColor="@color/detail_offline"
+                        android:textSize="14sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/off_tempRel"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/off_temTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="温度 27°C"
+                        android:textColor="@color/detail_offline"
+                        android:textSize="14sp"
+                        android:layout_centerVertical="true"
+                        android:layout_centerHorizontal="true" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/detail_offline"></View>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:id="@+id/off_coldRel"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/off_coldIv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:src="@mipmap/off_tocold" />
+
+                            <TextView
+                                android:id="@+id/off_coldTv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="5dp"
+                                android:text="制冷"
+                                android:textColor="@color/detail_offline"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/detail_offline" />
+
+                    <RelativeLayout
+                        android:id="@+id/off_hotRel"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="0.5dp"
+                        android:layout_weight="1">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/off_hotIv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:src="@mipmap/off_tohot" />
+
+                            <TextView
+                                android:id="@+id/off_hotTv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="5dp"
+                                android:text="制热"
+                                android:textColor="@color/detail_offline"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/detail_offline" />
+
+                    <RelativeLayout
+                        android:id="@+id/off_windyRel"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="0.5dp"
+                        android:layout_weight="1">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/off_windyIv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:src="@mipmap/off_towindy" />
+
+                            <TextView
+                                android:id="@+id/off_windyTv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="5dp"
+                                android:text="通风"
+                                android:textColor="@color/detail_offline"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/detail_offline" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:id="@+id/off_highRel"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/off_highIv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:src="@mipmap/off_tohigh" />
+
+                            <TextView
+                                android:id="@+id/off_highTv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="5dp"
+                                android:text="高档"
+                                android:textColor="@color/detail_offline"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/detail_offline" />
+                    <RelativeLayout
+                        android:id="@+id/off_middleRel"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="0.5dp"
+                        android:layout_weight="1">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/off_middleIv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:src="@mipmap/off_tomiddle" />
+
+                            <TextView
+                                android:id="@+id/off_middleTv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="5dp"
+                                android:text="中档"
+                                android:textColor="@color/detail_offline"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+                    </RelativeLayout>
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/detail_offline" />
+                    <RelativeLayout
+                        android:id="@+id/off_lowRel"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="0.5dp"
+                        android:layout_weight="1">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/off_lowIv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:src="@mipmap/off_tolow" />
+
+                            <TextView
+                                android:id="@+id/off_lowTv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="5dp"
+                                android:text="低档"
+                                android:textColor="@color/detail_offline"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+                    </RelativeLayout>
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/detail_offline" />
+
+                    <RelativeLayout
+                        android:id="@+id/off_aotuRel"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="0.5dp"
+                        android:layout_weight="1">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/off_autoIv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:src="@mipmap/off_toaotu" />
+
+                            <TextView
+                                android:id="@+id/off_autoTv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="5dp"
+                                android:text="自动"
+                                android:textColor="@color/detail_offline"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/detail_offline" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:id="@+id/off_energyRel"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/off_energyIv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:src="@mipmap/off_toenergy" />
+
+                            <TextView
+                                android:id="@+id/off_energyTv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="5dp"
+                                android:text="节能"
+                                android:textColor="@color/detail_offline"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/detail_offline" />
+
+                    <RelativeLayout
+                        android:id="@+id/off_sleepRel"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="0.5dp"
+                        android:layout_weight="1">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/off_sleepIv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:src="@mipmap/off_tosleep" />
+
+                            <TextView
+                                android:id="@+id/off_sleepTv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="5dp"
+                                android:text="睡眠"
+                                android:textColor="@color/detail_offline"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/detail_offline" />
+
+                    <RelativeLayout
+                        android:id="@+id/off_switchRel"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="0.5dp"
+                        android:layout_weight="1">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/off_switvhIv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:src="@mipmap/off_toswitch" />
+
+                            <TextView
+                                android:id="@+id/off_switchTv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="5dp"
+                                android:text="关闭"
+                                android:textColor="@color/detail_offline"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/detail_offline"></View>
+            </LinearLayout>
+
+            </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

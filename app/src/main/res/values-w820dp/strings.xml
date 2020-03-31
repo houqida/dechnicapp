@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="scene_devicelist_title">添加设备</string>
+    <string name="goadd">去添加</string>
+    <string name="http_error">连接超时，请重试</string>
+</resources>
