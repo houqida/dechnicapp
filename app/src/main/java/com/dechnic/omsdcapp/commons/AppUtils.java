@@ -33,7 +33,8 @@ public class AppUtils {
     //保存服务器地址
     public static String getServerAdress(Context context) {
         String value = context.getSharedPreferences(Constants.IS_SERVER_ADRESS, Context.MODE_PRIVATE)
-                .getString(Constants.SERVER_ADRESS, null);
+                .getString(Constants.SERVER_ADRESS, Constants.SERVER_ADDR);
+        if (value == null || value.equals("")) value = Constants.SERVER_ADDR;
         Log.e("serverAdress", "" + value);
         return value;
     }

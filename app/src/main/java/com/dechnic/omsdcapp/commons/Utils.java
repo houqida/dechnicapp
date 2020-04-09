@@ -72,7 +72,7 @@ public class Utils {
         Class<?> tabLayout = tabs.getClass();
         Field tabStrip = null;
         try {
-            if (Build.VERSION.SDK_INT==28){
+            if (Build.VERSION.SDK_INT<28){
                 tabStrip = tabLayout.getDeclaredField("mTabStrip");
             }else {
                 tabStrip = tabLayout.getDeclaredField("slidingTabIndicator");

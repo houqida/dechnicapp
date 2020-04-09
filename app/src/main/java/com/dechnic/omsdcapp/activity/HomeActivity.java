@@ -1,5 +1,6 @@
 package com.dechnic.omsdcapp.activity;
 
+import android.app.Application;
 import android.content.Intent;
 import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
@@ -347,6 +348,8 @@ public class HomeActivity extends BaseActivity implements BottomTabBar.OnSelectL
                 if (loginActivity == null) {
                     loginActivity = new UserLoginActivity();
                 }
+                //清除缓存里的服务器地址
+                AppUtils.setServerAdress(getApplicationContext(),"");
                 Intent intent = new Intent(this, loginActivity.getClass());
                 startActivity(intent);
                 finish();
