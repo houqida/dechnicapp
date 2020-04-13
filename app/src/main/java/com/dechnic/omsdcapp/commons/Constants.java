@@ -24,7 +24,7 @@ public class Constants {
     public static final int NO_NETWORK = 0;
     public static final int WIFI = 1;
     public static final int MOBILE = 2;
-    public static final String SERVER_ADDR = "117.73.253.204:8081";
+    public static final String SERVER_ADDR = "demo.dechnic.com:8081";
 
 
 
