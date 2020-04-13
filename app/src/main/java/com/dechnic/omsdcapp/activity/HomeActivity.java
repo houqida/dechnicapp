@@ -1,6 +1,5 @@
 package com.dechnic.omsdcapp.activity;
 
-import android.app.Application;
 import android.content.Intent;
 import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
