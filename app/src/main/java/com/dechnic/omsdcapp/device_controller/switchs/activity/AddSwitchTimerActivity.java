@@ -332,7 +332,7 @@ public class AddSwitchTimerActivity extends BaseActivity {
         params.addQueryStringParameter("deviceWeek", "no");
 
         params.addQueryStringParameter("deviceType", tt);
-        params.addQueryStringParameter("temperature", detailsTimeList.get(order - 1).getTemperature());
+        params.addQueryStringParameter("temperature", detailsTimeList.get(order - 1).getTemperature().equals("null")?"0":detailsTimeList.get(order - 1).getTemperature());
         params.addQueryStringParameter("order", order + "");
         if ("lv".equals(from)) {
             params.addQueryStringParameter("addFlag", "old");
@@ -345,7 +345,7 @@ public class AddSwitchTimerActivity extends BaseActivity {
         }
 
         Log.e("==access_token", AppUtils.getAccessToken(this));
-        Log.e("==temperature", detailsTimeList.get(order - 1).getTemperature());
+        Log.e("==temperature", detailsTimeList.get(order - 1).getTemperature().equals("null")?"0":detailsTimeList.get(order - 1).getTemperature());
         Log.e("==controlId", controlId);
         Log.e("==resourceFlag", detailsTimeList.get(order - 1).getResourceFlag());
         Log.e("==deviceStation", detailsTimeList.get(order - 1).getDeviceStation());
@@ -358,7 +358,7 @@ public class AddSwitchTimerActivity extends BaseActivity {
         Log.e("==deviceFirm", detailsTimeList.get(order - 1).getDeviceFirm());
         Log.e("==deviceTime", deciceTime);
         Log.e("==deviceType", tt);
-        Log.e("==temperature", detailsTimeList.get(order - 1).getTemperature());
+//        Log.e("==temperature", detailsTimeList.get(order - 1).getTemperature());
 
         Log.e("==order", order + "");
         Log.e("==deviceStatus", "0");

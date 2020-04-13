@@ -327,11 +327,11 @@ public class SwitchTimerActivity extends BaseActivity {
         params.addQueryStringParameter("deviceTime", list.get(i).getOrg_deviceTime());
         params.addQueryStringParameter("deviceWeek", list.get(i).getOrg_deviceWeek());
         params.addQueryStringParameter("deviceType", list.get(i).getDeviceType());
-        params.addQueryStringParameter("temperature", detailsTimeList.get(devideOrder - 1).getTemperature());
+        params.addQueryStringParameter("temperature", detailsTimeList.get(devideOrder - 1).getTemperature().equals("null")?"0":detailsTimeList.get(devideOrder - 1).getTemperature());
 
 
         Log.e("==access_token", AppUtils.getAccessToken(this));
-        Log.e("==temperature", detailsTimeList.get(devideOrder - 1).getTemperature());
+        Log.e("==temperature", detailsTimeList.get(devideOrder - 1).getTemperature().equals("null")?"0":detailsTimeList.get(devideOrder - 1).getTemperature());
         Log.e("==controlId", controlId);
         Log.e("==resourceFlag", detailsTimeList.get(devideOrder - 1).getResourceFlag());
         Log.e("==deviceStation", detailsTimeList.get(devideOrder - 1).getDeviceStation());
@@ -343,7 +343,7 @@ public class SwitchTimerActivity extends BaseActivity {
         Log.e("==deviceFirm", detailsTimeList.get(devideOrder - 1).getDeviceFirm());
         Log.e("==deviceTime", list.get(i).getOrg_deviceTime());
         Log.e("==deviceType", list.get(i).getDeviceType());
-        Log.e("==temperature", detailsTimeList.get(devideOrder - 1).getTemperature());
+//        Log.e("==temperature", detailsTimeList.get(devideOrder - 1).getTemperature());
 
         params.addQueryStringParameter("order", devideOrder + "");
         params.addQueryStringParameter("addFlag", "old");

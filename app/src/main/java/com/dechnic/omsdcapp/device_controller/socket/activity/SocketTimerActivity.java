@@ -329,11 +329,11 @@ public class SocketTimerActivity extends BaseActivity {
         params.addQueryStringParameter("deviceTime",entityList.get(i).getOrg_deviceTime());
         params.addQueryStringParameter("deviceWeek",entityList.get(i).getDeviceWeek());
         params.addQueryStringParameter("deviceType",entityList.get(i).getDeviceType());
-        params.addQueryStringParameter("temperature",detailsTimeList.get(devideOrder-1).getTemperature());
+        params.addQueryStringParameter("temperature",detailsTimeList.get(devideOrder-1).getTemperature().equals("null")?"0":detailsTimeList.get(devideOrder-1).getTemperature());
 
 
         Log.e("==access_token",AppUtils.getAccessToken(this));
-        Log.e("==temperature",detailsTimeList.get(devideOrder-1).getTemperature());
+        Log.e("==temperature",detailsTimeList.get(devideOrder-1).getTemperature().equals("null")?"0":detailsTimeList.get(devideOrder-1).getTemperature());
         Log.e("==controlId",controlId);
         Log.e("==resourceFlag",detailsTimeList.get(devideOrder-1).getResourceFlag());
         Log.e("==deviceStation",detailsTimeList.get(devideOrder-1).getDeviceStation());
@@ -345,7 +345,7 @@ public class SocketTimerActivity extends BaseActivity {
         Log.e("==deviceFirm",detailsTimeList.get(devideOrder-1).getDeviceFirm());
         Log.e("==deviceTime",entityList.get(i).getOrg_deviceTime());
         Log.e("==deviceType",entityList.get(i).getDeviceType());
-        Log.e("==temperature",detailsTimeList.get(devideOrder-1).getTemperature());
+//        Log.e("==temperature",detailsTimeList.get(devideOrder-1).getTemperature());
 
         params.addQueryStringParameter("order",devideOrder+"");
         params.addQueryStringParameter("addFlag","old");
