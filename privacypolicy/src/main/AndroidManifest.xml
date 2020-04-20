@@ -1,0 +1,7 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.dechnic.privacypolicy" >
+    <application>
+        <activity android:name=".activity.TermsActivity"></activity>
+        <activity android:name=".activity.PrivacyPolicyActivity"></activity>
+    </application>
+</manifest>

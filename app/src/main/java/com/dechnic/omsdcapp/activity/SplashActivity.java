@@ -13,6 +13,7 @@ import android.widget.RelativeLayout;
 import com.dechnic.omsdcapp.R;
 import com.dechnic.omsdcapp.base.Base2Activity;
 import com.dechnic.omsdcapp.commons.AppUtils;
+import com.dechnic.privacypolicy.tools.PrivacyTools;
 
 import java.util.Timer;
 import java.util.TimerTask;
@@ -21,9 +22,21 @@ import java.util.TimerTask;
  * 启动页
  */
 
-public class SplashActivity extends Base2Activity {
+public class SplashActivity extends Base2Activity  {
     private Timer timer;
     private RelativeLayout activity_splash;
+    private String SP_PRIVACY = "sp_privacy";
+    private String SP_VERSION_CODE = "sp_version_code";
+    private boolean isCheckPrivacy = false;
+    private long versionCode;
+    private long currentVersionCode;
+    private PrivacyTools.IPrivacyPolicyListener  privacyPolicyListener = new PrivacyTools.IPrivacyPolicyListener() {
+        @Override
+        public void privacyCallBack() {
+            StartAniFour();
+        }
+    };
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,9 +45,7 @@ public class SplashActivity extends Base2Activity {
         activity_splash = (RelativeLayout) findViewById(R.id.activity_splash);
 //        timer = new Timer();
 //        timer.schedule(new MyTimerTask(), 2000);
-
-        StartAniFour();
-
+        PrivacyTools.getInstance().check(SplashActivity.this,privacyPolicyListener);
     }
 
     private void StartAniFour() {
@@ -72,6 +83,8 @@ public class SplashActivity extends Base2Activity {
             finish();
         }
     }
+
+
 
     class MyTimerTask extends TimerTask{
 

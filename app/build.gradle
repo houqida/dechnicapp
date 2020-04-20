@@ -64,4 +64,5 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     debugImplementation 'com.squareup.leakcanary:leakcanary-android:1.3'
     releaseImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.3'
+    implementation project(path: ':privacypolicy')
 }
