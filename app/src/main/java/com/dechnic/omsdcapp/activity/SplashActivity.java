@@ -25,11 +25,6 @@ import java.util.TimerTask;
 public class SplashActivity extends Base2Activity  {
     private Timer timer;
     private RelativeLayout activity_splash;
-    private String SP_PRIVACY = "sp_privacy";
-    private String SP_VERSION_CODE = "sp_version_code";
-    private boolean isCheckPrivacy = false;
-    private long versionCode;
-    private long currentVersionCode;
     private PrivacyTools.IPrivacyPolicyListener  privacyPolicyListener = new PrivacyTools.IPrivacyPolicyListener() {
         @Override
         public void privacyCallBack() {
